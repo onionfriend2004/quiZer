@@ -7,5 +7,9 @@ def login(request):
     return render(request, 'main/registration/login.html')
 
 def sign_up(request):
-    return render(request, 'main/registration/sign_up.html')
+    if request.method == 'PoST':
+        form = RegisterForm(request.POST)
+    else:
+        form = RegisterForm()
+    return render(request, 'main/registration/sign_up.html', {"form": form})
 # Create your views here.
