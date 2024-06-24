@@ -17,3 +17,8 @@ def sign_up(request):
     else:
         form = RegisterForm()
     return render(request, 'registration/sign_up.html', {"form": form})
+
+@login_required(login_url="/login")
+def profile(request):
+    #TODO: write profile func 
+    return render(request, 'main/profile.html')

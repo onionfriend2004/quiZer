@@ -1,4 +1,10 @@
 {% extends 'main/base.html' %} {% block title %}Profile{% endblock %}
 {% block content %}
-<h1>main</h1>
+    <h1>{{user.username}}</h1>
+    <p>Bio</p>
+    <p>{{user.profile.bio}}</p>
+{% if author %}
+    <button type="button" class="btn btn-primary">Change bio</button>
+{% endif %}
+    <h1>quizes</h1>
 {% endblock %}
