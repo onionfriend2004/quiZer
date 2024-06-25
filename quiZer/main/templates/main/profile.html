@@ -4,7 +4,10 @@
     <p>Bio</p>
     <p>{{user.profile.bio}}</p>
 {% if author %}
-    <button type="button" class="btn btn-primary">Change bio</button>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Change profile</button>
+    </form>
 {% endif %}
     <h1>quizes</h1>
 {% endblock %}

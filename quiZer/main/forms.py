@@ -14,3 +14,8 @@ class ProfileUpdate(forms.ModelForm):
         model = Profile
         #TODO: More profile fields
         fields = ["bio"]
+
+class UserUpdate(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'email']
