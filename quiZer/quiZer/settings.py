@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'crispy_bootstrap5',
+    "nested_admin",
     'main.apps.MainConfig',
     'quiz.apps.QuizConfig',
 ]
